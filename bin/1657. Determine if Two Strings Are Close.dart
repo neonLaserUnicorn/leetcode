@@ -13,12 +13,12 @@ class Solution {
       map2.update(word2[i], (value) => value + 1, ifAbsent: () => 1);
     }
 
-    map1.entries.forEach((element) {
+    for (var element in map1.entries) {
       count1.update(element.value, (value) => value + 1, ifAbsent: () => 1);
-    });
-    map2.entries.forEach((element) {
+    }
+    for (var element in map2.entries) {
       count2.update(element.value, (value) => value + 1, ifAbsent: () => 1);
-    });
+    }
 
     bool ans = true;
 
